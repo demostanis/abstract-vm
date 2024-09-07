@@ -109,8 +109,6 @@ void processFile(std::ifstream &file, bool isStdin)
 				std::println("{}", (char)c->value);
 			else
 				throw NotChar();
-			delete top;
-			stack.pop_front();
 		}
 		else if (instruction == "assert")
 		{

@@ -1,7 +1,10 @@
 #pragma once
 
+class MoreSpecificThanStdExceptionBecauseTheScaleDemandsIt :
+	public std::exception {};
+
 #define defineerror(name, str) \
-class name : public std::exception \
+class name : public MoreSpecificThanStdExceptionBecauseTheScaleDemandsIt \
 { \
 	virtual const char* what() const noexcept \
 	{ \
