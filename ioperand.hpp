@@ -44,6 +44,8 @@ public:
 		public: \
 			t value; \
 			std::string str; \
+			IOperand_##n(const IOperand_##n &); \
+			IOperand_##n operator=(const IOperand_##n &); \
 			IOperand_##n(t, std::string); \
 			int getPrecision() const; \
 			eOperandType getType() const; \
